@@ -69,7 +69,7 @@ jobs:
   deploy-prod:
     runs-on: ubuntu-latest
     needs: test
-    i#f: github.ref == 'refs/heads/main'
+    #if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
