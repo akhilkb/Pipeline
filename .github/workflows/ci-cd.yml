@@ -48,12 +48,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy to Development
-        env:
+        #env:
           #DEPLOYMENT_KEY: ${{ secrets.DEPLOYMENT_KEY }}
           #SERVER_HOST: ${{ secrets.SERVER_HOST }}
           #SERVER_USER: ${{ secrets.SERVER_USER }}
         run: |
-          ssh -i $DEPLOYMENT_KEY $SERVER_USER@$SERVER_HOST 'bash -s' < ./scripts/deploy.sh
+          #ssh -i $DEPLOYMENT_KEY $SERVER_USER@$SERVER_HOST 'bash -s' < ./scripts/deploy.sh
           echo "Deploying to Development Environment"
           # Add your deployment script/commands here
           
