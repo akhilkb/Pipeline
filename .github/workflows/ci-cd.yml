@@ -41,7 +41,7 @@ jobs:
   deploy-dev:
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/heads/dev'
+    #if: github.ref == 'refs/heads/dev'
 
     steps:
       - name: Checkout code
@@ -55,7 +55,7 @@ jobs:
   deploy-qa:
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/heads/qa'
+    #if: github.ref == 'refs/heads/qa'
 
     steps:
       - name: Checkout code
@@ -69,7 +69,7 @@ jobs:
   deploy-prod:
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/heads/main'
+    i#f: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
