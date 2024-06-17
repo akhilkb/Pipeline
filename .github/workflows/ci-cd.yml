@@ -49,9 +49,9 @@ jobs:
 
       - name: Deploy to Development
         env:
-          DEPLOYMENT_KEY: ${{ secrets.DEPLOYMENT_KEY }}
-          SERVER_HOST: ${{ secrets.SERVER_HOST }}
-          SERVER_USER: ${{ secrets.SERVER_USER }}
+          #DEPLOYMENT_KEY: ${{ secrets.DEPLOYMENT_KEY }}
+          #SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          #SERVER_USER: ${{ secrets.SERVER_USER }}
         run: |
           ssh -i $DEPLOYMENT_KEY $SERVER_USER@$SERVER_HOST 'bash -s' < ./scripts/deploy.sh
           echo "Deploying to Development Environment"
